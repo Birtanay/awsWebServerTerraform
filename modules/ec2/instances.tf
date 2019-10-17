@@ -13,7 +13,7 @@ resource "aws_instance" "webserver" {
         type         = "ssh"
         user         = "ec2-user"
         host         = "${self.public_ip}"
-        private_key  = "${file("~/.ssh/known_hosts")}"
+        private_key  = "${file("~/.ssh/frankfurt.pem")}"
     }
 
 
