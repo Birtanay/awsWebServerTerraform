@@ -35,7 +35,7 @@ resource "aws_instance" "webserver" {
         source = "index.html"
         destination = "/var/www/html/index.html"
     }
-    provisioner "config" {
+    provisioner "file" {
         source = "httpd.conf"
         destination = "/etc/httpd/conf/httpd.conf"
     }
