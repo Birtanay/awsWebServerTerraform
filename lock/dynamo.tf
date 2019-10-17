@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 
-resource "aws_dynamodb_table" "terraform-lock" {
+resource "aws_dynamodb_table" "dynamodb-terraform-lock" {
    name = "terraform-lock"
    hash_key = "LockID"
    read_capacity = 20
@@ -14,7 +14,7 @@ resource "aws_dynamodb_table" "terraform-lock" {
       type = "S"
    }
 
-   tags {
+   tags = {
      Name = "Terraform Lock Table"
    }
 }
