@@ -1,6 +1,6 @@
 resource "aws_security_group" "allow_all" {
   name = "allow_all"
-  description = "Allows all egress traffic, only 8080 ingress"
+  description = "Allows all egress traffic, only 22 and 8080 ingress"
 
   ingress {
       from_port = 8080
